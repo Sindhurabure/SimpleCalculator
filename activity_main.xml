@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#95CAE9"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FBFBFB"
+        android:shadowColor="#FFFFFF"
+        android:text="Simple Calculator"
+        android:textColor="#090909"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/num1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Number 1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint=""
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/num1Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/num1Text"
+        app:layout_constraintTop_toTopOf="@id/num1Text" />
+
+    <TextView
+        android:id="@+id/num2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Number 2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num1Text" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint=""
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/num2Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/num2Text"
+        app:layout_constraintTop_toTopOf="@id/num2Text" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num2Text" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btnAdd"
+        app:layout_constraintTop_toTopOf="@id/btnAdd" />
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="*"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/btnSub"
+        app:layout_constraintTop_toTopOf="@id/btnAdd" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="/"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnMul"
+        app:layout_constraintTop_toTopOf="@id/btnAdd" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Result"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="#EAEAEA"
+        android:gravity="center"
+        android:text=""
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
